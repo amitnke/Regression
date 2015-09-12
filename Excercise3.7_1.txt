@@ -27,3 +27,11 @@ b. y(female) = 85 + 10*4 + 0.07*110 + 0.01*110*4
             =>   137.1
 c. False, We must examine the p-value of the regression coefficient to determine if the interaction term is statistical significant or not. 
 
+4. n = 100, 
+Y = B0 + B1X + B2X^2 + B3X^3 + E
+a). True relationship is Y = B0 + B1X + E
+I would expect the polynomial regression to have lower training RSS than the linear regression because it could make a tighter fit against data that matched with a wider irreducible error(Var(epsilon)). 
+b). Converse to (a), I would expect the polynomial regression to have a higher test RSS as the overfit from training would have more error then the linear regression. 
+c). Polynomial regression has lower train RSS than the linear fit because of higher flexibility: no matter what the underlying true relationship is the more flexibility model will closer follow points and reduce train RSS. 
+d). There is not enough information to tell which test RSS would be lower for either regression given the problem statement is defined as not knowing "how far it is from linear". If it is closer to linear than cubic, the linear regression test RSS could be lower than the cubic regression test RSS. Or, if it is closer to cubic than linear, the cubic regression test RSS could be lower than the linear regression test RSS. It is dues to bias-variance tradeoff: it is not clear what level of flexibility will fit data better.
+
