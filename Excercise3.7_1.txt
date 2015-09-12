@@ -25,5 +25,5 @@ iii). For a fixed value of IQ and GPA, males earn more on average than females p
 b. y(female) = 85 + 10*4 + 0.07*110 + 0.01*110*4
             => 85 + 40 + 7.7 + 4.4
             =>   137.1
-
+c. False, We must examine the p-value of the regression coefficient to determine if the interaction term is statistical significant or not. 
 
