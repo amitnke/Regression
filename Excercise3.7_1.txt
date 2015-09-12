@@ -1,0 +1,29 @@
+        Coefficient     Std. Error      t-static        p-value
+Intercept 2.939         0.3119          9.42            < 0.0001
+TV        0.046         0.0014          32.81           < 0.0001
+radio     0.189         0.0086          21.89           < 0.0001
+newspaper-0.001         0.0059         -0.18            < 0.8599
+
+1. The null hypothesis of "TV" is that in presence of radio and newspaper ads, TV ads have no effect on Sales. Similary for radio and newpaper. The low p-value of TV and radio suggests that null hypothesis are false for TV and radio. The high p-value of newspaper suggest that null hypothesis is true for newspaper. 
+
+2. KNN classifier and KNN regression methods are closely related in formula. However, the final result of KNN classifier is the classification output of Y(qualitative), where as the output for a KNN regression predicts the quantitative value for f(x). 
+
+3. 
+X1 = GPA
+X2 = IQ
+X3 = Gender(1,0)
+X4 = GPA*IQ
+X5 = GPA*Gender
+Y = Salary after graduation
+B0 = 50, B1 = 20, B2 = 0.07, B3 = 35, B4 = 0.01 and B5 = -10
+Y = 50 + 20*GPA + 0.07*IQ + 35*Gender + 0.01*GPA*IQ -10*GPA*Gender
+Y(male) = 50 + 20*GPA + 0.07*IQ + 0.01*GPA*IQ
+y(female) = 85 + 10*GPA + 0.07*IQ + 0.01*GPA*IQ
+a. 
+ii). For a fixed value of IQ and GPA, females earn more on average males. 
+iii). For a fixed value of IQ and GPA, males earn more on average than females provided that the GPA is high enough. 
+b. y(female) = 85 + 10*4 + 0.07*110 + 0.01*110*4
+            => 85 + 40 + 7.7 + 4.4
+            =>   137.1
+
+
