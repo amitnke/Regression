@@ -25,4 +25,5 @@ fitted(lm1)
 layout(matrix(1:4, 2, 2))
 plot(lm1)
 lm2 <- lm(Balance~Age + Rating + Limit,credit )
+#Variance Inflation Factor is to predict the collinearity in the dataset
 VIF(lm2)
