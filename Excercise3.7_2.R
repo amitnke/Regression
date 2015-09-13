@@ -44,3 +44,5 @@ summary(lm.fit2)
 par(mfrow=c(2,2))
 plot(lm.fit2)
 plot(predict(lm.fit2),rstudent(lm.fit2))
+
+The end
