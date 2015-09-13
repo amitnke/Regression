@@ -1,4 +1,4 @@
-advertising = read.csv("Advertising.csv", header = T)
+advertising = read.csv("/Users/amitkumar/R/R-Programming/Advertising.csv", header = T)
 
 # estimate b1 manually
 
@@ -29,9 +29,9 @@ RSS_term <- (advertising$Sales - b0 - (b1*advertising$TV))*(advertising$Sales - 
 
 RSS <- sum(RSS_term)
 #Residual Sum Square is sum of square of difference of each individual y and mean(y). 
-#µ is the population mean of random variable Y. 
+#? is the population mean of random variable Y. 
 #
-#Var(ˆµ) = SE(ˆµ)2 ˆµ is the estimate of µ. =s2/n
+#Var(??) = SE(??)2 ?? is the estimate of ?. =s2/n
 #where s is the standard deviation of each of the realizations yi of Y
 
 #Resudual Standard Error
@@ -124,8 +124,8 @@ abline(ad_model1, col = "red")
 names(ad_model1)
 ad_model1$coefficients
 ad_model1$residuals
-#In the case of the advertising data, the 95% confidence interval for ß0
-#is [6.130, 7.935] and the 95% confidence interval for ß1 is [0.042, 0.053].
+#In the case of the advertising data, the 95% confidence interval for ?0
+#is [6.130, 7.935] and the 95% confidence interval for ?1 is [0.042, 0.053].
 confint(ad_model1)
 predict(ad_model1,data.frame(lstat=c(5,10,15)),interval="confidence")
 plot(ad_model1)

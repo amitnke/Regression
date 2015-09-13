@@ -34,4 +34,8 @@ I would expect the polynomial regression to have lower training RSS than the lin
 b). Converse to (a), I would expect the polynomial regression to have a higher test RSS as the overfit from training would have more error then the linear regression. 
 c). Polynomial regression has lower train RSS than the linear fit because of higher flexibility: no matter what the underlying true relationship is the more flexibility model will closer follow points and reduce train RSS. 
 d). There is not enough information to tell which test RSS would be lower for either regression given the problem statement is defined as not knowing "how far it is from linear". If it is closer to linear than cubic, the linear regression test RSS could be lower than the cubic regression test RSS. Or, if it is closer to cubic than linear, the cubic regression test RSS could be lower than the linear regression test RSS. It is dues to bias-variance tradeoff: it is not clear what level of flexibility will fit data better.
+6. y = B0 + B1*x
+B1 = Cov(x,y)/(Var(x)^2)
+B0 = mean(y) - b1(mean(x))
+
 
