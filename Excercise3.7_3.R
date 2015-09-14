@@ -12,3 +12,11 @@ Sales = 13.04 + -0.05 Price + -0.02 UrbanYes + 1.20 USYes
 #Price and USYes, based on the p-values, F-statistic, and p-value of the F-statistic.
 lm2 = lm(Sales ~ Price + US)
 summary(lm2)
+#Based on the RSE and R^2 of the linear regressions, they both fit the data similarly, with linear regression from (e) fitting the data slightly better.
+confint(lm2)#95% confidence intervals for the coefficients
+#evidence of outliner or high leverage observations in the model
+plot(predict(lm2), rstudent(lm2))
+#All studentized residual appears to be bounded by (-3, 3), So no potentials outliners are suggested from the linear regression. 
+par(mfrow=c(2,2))
+plot(lm2)
+#There are few observations that greatly exceeds (p+1)/n(0.0076) on the leveage-statis plot that suggest that the corresponding points have high leveage. 
