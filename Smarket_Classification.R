@@ -40,3 +40,13 @@ Smarket.2005 = Smarket[!train,]
 dim(Smarket.2005)
 Direction.2005 = Direction[!train]
 #Smarket[train,] is the training data
+glm.fit2 <- glm(Direction~Lag1+Lag2+Lag3+Lag4+Lag5+Volume, 
+                data=Smarket, family=binomial, subset = train)
+glm.probs2 = predict(glm.fit2, Smarket.2005, type = "response")
+dim(Smarket.2005)
+glm.pred=rep("Down", 252)
+glm.pred[glm.probs2 > 0.5] = "Up"
+table(glm.pred, Direction.2005)
+mean(glm.pred==Direction.2005)
+mean(glm.pred!=Direction.2005)##Gives set error rate
+
