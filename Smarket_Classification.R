@@ -49,4 +49,14 @@ glm.pred[glm.probs2 > 0.5] = "Up"
 table(glm.pred, Direction.2005)
 mean(glm.pred==Direction.2005)
 mean(glm.pred!=Direction.2005)##Gives set error rate
-
+##Using predictors that have no no relationship with the response tends to 
+# cause a deterioration in the test error rate. 
+glm.fit3 <- glm(Direction~Lag1+Lag2, data = Smarket, family = binomial, subset = train)
+glm.probs3 = predict(glm.fit3, Smarket.2005, type = "response")
+glm.pred = rep("Down", 252)
+glm.pred[glm.probs3 > 0.5] = "Up"
+table(glm.pred, Direction.2005)
+mean(glm.pred==Direction.2005)
+106/(106+76)
+##################################################
+predict(glm.fit3, newdata=data.frame(Lag1 = c(1.2, 1.5), Lag2 = c(1.1, -0.8)), type = "response")
